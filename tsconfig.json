@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es3",
+        "noImplicitAny": true,
+        "outDir": "web/js",
+        "newLine": "LF",
+        "jsx": "react"
+    },
+    "exclude": [
+        "web"
+    ]
+}
