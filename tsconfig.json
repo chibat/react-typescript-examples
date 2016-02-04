@@ -4,7 +4,8 @@
         "noImplicitAny": true,
         "outDir": "web/js",
         "newLine": "LF",
-        "jsx": "react"
+        "jsx": "react",
+        "removeComments": true
     },
     "exclude": [
         "web"

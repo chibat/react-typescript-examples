@@ -4,8 +4,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// Simple pure-React component so we don't have to remember
-// Bootstrap's classes
 var BootstrapButton = (function (_super) {
     __extends(BootstrapButton, _super);
     function BootstrapButton() {
@@ -34,10 +32,7 @@ var BootstrapModal = (function (_super) {
             }
         };
     }
-    // The following two methods are the only places we need to
-    // integrate Bootstrap or jQuery with the components lifecycle methods.
     BootstrapModal.prototype.componentDidMount = function () {
-        // When the component is added, turn it into a modal
         $(this.refs['root']).modal({ backdrop: 'static', keyboard: false, show: false });
     };
     ;

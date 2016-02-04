@@ -16,10 +16,10 @@ var Header = (function (_super) {
     }
     Header.prototype.render = function () {
         this.dispScreen1();
-        return (React.createElement("div", null, React.createElement("a", {"href": "#", "onClick": this.dispScreen1}, "Screen1"), " | ", React.createElement("a", {"href": "#", "onClick": this.dispScreen2}, "Screen2")));
+        return (React.createElement("div", null, React.createElement("a", {href: "#", onClick: this.dispScreen1}, "Screen1"), " | ", React.createElement("a", {href: "#", onClick: this.dispScreen2}, "Screen2")));
     };
     return Header;
-})(React.Component);
+}(React.Component));
 var Screen1 = (function (_super) {
     __extends(Screen1, _super);
     function Screen1() {
@@ -32,7 +32,7 @@ var Screen1 = (function (_super) {
         alert('called componentWillUnmount - Screen1');
     };
     return Screen1;
-})(React.Component);
+}(React.Component));
 var Screen2 = (function (_super) {
     __extends(Screen2, _super);
     function Screen2() {
@@ -45,5 +45,5 @@ var Screen2 = (function (_super) {
         alert('called componentWillUnmount - Screen2');
     };
     return Screen2;
-})(React.Component);
+}(React.Component));
 ReactDOM.render(React.createElement(Header, null), document.getElementById('header'));
