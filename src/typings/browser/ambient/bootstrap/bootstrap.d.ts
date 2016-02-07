@@ -1,10 +1,11 @@
+// Compiled using typings@0.6.6
+// Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/76534619dd2e00ef7575225fec70eec5bd67a62a/bootstrap/bootstrap.d.ts
 // Type definitions for Bootstrap 3.3.5
 // Project: http://twitter.github.com/bootstrap/
 // Definitions by: Boris Yankov <https://github.com/borisyankov/>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
 
-/// <reference path="../jquery/jquery.d.ts"/>
 
 interface ModalOptions {
     backdrop?: boolean|string;

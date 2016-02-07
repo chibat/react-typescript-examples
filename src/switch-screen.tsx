@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/browser.d.ts" />
 
 class Header extends React.Component<{}, {}> {
     dispScreen1 = () => {

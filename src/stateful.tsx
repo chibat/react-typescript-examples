@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/browser.d.ts" />
 
 class Timer extends React.Component<{}, {secondsElapsed: number}> {
     interval: number;

@@ -1,9 +1,10 @@
+// Compiled using typings@0.6.6
+// Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/49f853d9dc71a5647175d7bfd62aa7030e92b39f/react/react-global-0.13.3.d.ts
 // Type definitions for React v0.13.3 (namespace)
 // Project: http://facebook.github.io/react/
 // Definitions by: Asana <https://asana.com>, AssureSign <http://www.assuresign.com>, Microsoft <https://microsoft.com>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
-/// <reference path="react.d.ts" />
 
 import React = __React;
 

@@ -1,4 +1,3 @@
-/// <reference path="typings/tsd.d.ts" />
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -24,6 +23,6 @@ var Timer = (function (_super) {
         return (React.createElement("div", null, "Seconds Elapsed: ", this.state.secondsElapsed));
     };
     return Timer;
-})(React.Component);
+}(React.Component));
 ;
 ReactDOM.render(React.createElement(Timer, null), document.getElementById('container'));

@@ -1,3 +1,5 @@
+// Compiled using typings@0.6.6
+// Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/99f6493ffb1ef5479c6154ec9f82a47178bbf8b6/react-router/history.d.ts
 // Type definitions for history v1.13.1
 // Project: https://github.com/rackt/history
 // Definitions by: Sergey Buturlakin <http://github.com/sergey-buturlakin>

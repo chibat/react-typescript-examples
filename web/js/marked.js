@@ -1,4 +1,3 @@
-/// <reference path="typings/tsd.d.ts" />
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -18,8 +17,8 @@ var MarkdownEditor = (function (_super) {
         this.state = { value: 'Type some *markdown* here!' };
     }
     MarkdownEditor.prototype.render = function () {
-        return (React.createElement("div", {"className": "MarkdownEditor"}, React.createElement("h3", null, "Input"), React.createElement("textarea", {"onChange": this.handleChange, "ref": "textarea", "defaultValue": this.state.value}), React.createElement("h3", null, "Output"), React.createElement("div", {"className": "content", "dangerouslySetInnerHTML": this.rawMarkup()})));
+        return (React.createElement("div", {className: "MarkdownEditor"}, React.createElement("h3", null, "Input"), React.createElement("textarea", {onChange: this.handleChange, ref: "textarea", defaultValue: this.state.value}), React.createElement("h3", null, "Output"), React.createElement("div", {className: "content", dangerouslySetInnerHTML: this.rawMarkup()})));
     };
     return MarkdownEditor;
-})(React.Component);
+}(React.Component));
 ReactDOM.render(React.createElement(MarkdownEditor, null), document.getElementById('container'));

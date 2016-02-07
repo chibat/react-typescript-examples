@@ -1,4 +1,3 @@
-/// <reference path="typings/tsd.d.ts" />
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -15,9 +14,9 @@ var Counter = (function (_super) {
         this.state = { clickCount: 0 };
     }
     Counter.prototype.render = function () {
-        return (React.createElement("h2", {"onClick": this.handleClick}, "Click me! Number of clicks: ", this.state.clickCount));
+        return (React.createElement("h2", {onClick: this.handleClick}, "Click me! Number of clicks: ", this.state.clickCount));
     };
     return Counter;
-})(React.Component);
+}(React.Component));
 ;
 ReactDOM.render(React.createElement(Counter, null), document.getElementById('message'));

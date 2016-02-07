@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/browser.d.ts" />
 
 // Simple pure-React component so we don't have to remember
 // Bootstrap's classes

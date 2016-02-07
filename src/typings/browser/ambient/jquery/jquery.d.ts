@@ -1,3 +1,5 @@
+// Compiled using typings@0.6.6
+// Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/cf2a968f0edd7d30773f7d23fe3708fa029d5ab7/jquery/jquery.d.ts
 // Type definitions for jQuery 1.10.x / 2.0.x
 // Project: http://jquery.com/
 // Definitions by: Boris Yankov <https://github.com/borisyankov/>, Christian Hoffmeister <https://github.com/choffmeister>, Steve Fenton <https://github.com/Steve-Fenton>, Diullei Gomes <https://github.com/Diullei>, Tass Iliopoulos <https://github.com/tasoili>, Jason Swearingen <https://github.com/jasons-novaleaf>, Sean Hill <https://github.com/seanski>, Guus Goossens <https://github.com/Guuz>, Kelly Summerlin <https://github.com/ksummerlin>, Basarat Ali Syed <https://github.com/basarat>, Nicholas Wolverson <https://github.com/nwolverson>, Derek Cicerone <https://github.com/derekcicerone>, Andrew Gaspar <https://github.com/AndrewGaspar>, James Harrison Fisher <https://github.com/jameshfisher>, Seikichi Kondo <https://github.com/seikichi>, Benjamin Jackman <https://github.com/benjaminjackman>, Poul Sorensen <https://github.com/s093294>, Josh Strobl <https://github.com/JoshStrobl>, John Reilly <https://github.com/johnnyreilly/>, Dick van den Brink <https://github.com/DickvdBrink>
@@ -607,6 +609,16 @@ interface JQueryAnimationOptions {
     specialEasing?: Object;
 }
 
+interface JQueryEasingFunction {
+    ( percent: number ): number;
+}
+
+interface JQueryEasingFunctions {
+    [ name: string ]: JQueryEasingFunction;
+    linear: JQueryEasingFunction;
+    swing: JQueryEasingFunction;
+}
+
 /**
  * Static members of jQuery (those on $ and jQuery themselves)
  */
@@ -889,6 +901,9 @@ interface JQueryStatic {
     /**
      * Effects
      */
+
+    easing: JQueryEasingFunctions;
+
     fx: {
         tick: () => void;
         /**
@@ -1363,9 +1378,9 @@ interface JQuery {
     /**
      * Set the value of each element in the set of matched elements.
      *
-     * @param value A string of text or an array of strings corresponding to the value of each matched element to set as selected/checked.
+     * @param value A string of text, an array of strings or number corresponding to the value of each matched element to set as selected/checked.
      */
-    val(value: string|string[]): JQuery;
+    val(value: string|string[]|number): JQuery;
     /**
      * Set the value of each element in the set of matched elements.
      *
@@ -3050,7 +3065,7 @@ interface JQuery {
      * 
      * @param elements One or more DOM elements to remove from the matched set.
      */
-    not(...elements: Element[]): JQuery;
+    not(elements: Element|Element[]): JQuery;
     /**
      * Remove elements from the set of matched elements.
      * 

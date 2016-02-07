@@ -1,4 +1,3 @@
-/// <reference path="typings/tsd.d.ts" />
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -14,12 +13,12 @@ var TodoList = (function (_super) {
     }
     TodoList.prototype.render = function () {
         var createItem = function (itemText, index) {
-            return React.createElement("li", {"key": index + itemText}, itemText);
+            return React.createElement("li", {key: index + itemText}, itemText);
         };
         return React.createElement("ul", null, this.props.items.map(createItem));
     };
     return TodoList;
-})(React.Component);
+}(React.Component));
 var TodoApp = (function (_super) {
     __extends(TodoApp, _super);
     function TodoApp() {
@@ -35,8 +34,8 @@ var TodoApp = (function (_super) {
     }
     TodoApp.prototype.render = function () {
         var _this = this;
-        return (React.createElement("div", null, React.createElement("h3", null, "TODO"), React.createElement(TodoList, {"items": this.state.items}), React.createElement("form", {"onSubmit": this.handleSubmit}, React.createElement("input", {"onChange": function (e) { return _this.setState({ text: value(e) }); }, "value": this.state.text}), React.createElement("button", null, 'Add #' + (this.state.items.length + 1)))));
+        return (React.createElement("div", null, React.createElement("h3", null, "TODO"), React.createElement(TodoList, {items: this.state.items}), React.createElement("form", {onSubmit: this.handleSubmit}, React.createElement("input", {onChange: function (e) { return _this.setState({ text: value(e) }); }, value: this.state.text}), React.createElement("button", null, 'Add #' + (this.state.items.length + 1)))));
     };
     return TodoApp;
-})(React.Component);
+}(React.Component));
 ReactDOM.render(React.createElement(TodoApp, null), document.getElementById('container'));

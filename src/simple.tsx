@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/browser.d.ts" />
 
 class HelloMessage extends React.Component<{name: string}, {}> {
     render() {

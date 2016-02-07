@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/browser.d.ts" />
 
 class Counter extends React.Component<{}, {clickCount: number}> {
     constructor() {

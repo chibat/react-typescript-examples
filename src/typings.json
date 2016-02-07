@@ -1,0 +1,12 @@
+{
+  "ambientDependencies": {
+    "bootstrap": "github:DefinitelyTyped/DefinitelyTyped/bootstrap/bootstrap.d.ts#76534619dd2e00ef7575225fec70eec5bd67a62a",
+    "history": "github:DefinitelyTyped/DefinitelyTyped/react-router/history.d.ts#99f6493ffb1ef5479c6154ec9f82a47178bbf8b6",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#cf2a968f0edd7d30773f7d23fe3708fa029d5ab7",
+    "marked": "github:DefinitelyTyped/DefinitelyTyped/marked/marked.d.ts#493d3b6882c79289cd9597a45c287250297d5b9d",
+    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#83b88a031cc8f2006fd361bf0a0b548c3bcc8259",
+    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#ca5bfe76d2d9bf6852cbc712d9f3e0047c93486e",
+    "react-global": "github:DefinitelyTyped/DefinitelyTyped/react/react-global-0.13.3.d.ts#49f853d9dc71a5647175d7bfd62aa7030e92b39f",
+    "react-router": "github:DefinitelyTyped/DefinitelyTyped/react-router/react-router.d.ts#07feae11780495b90145451d48d4a50923762ef1"
+  }
+}

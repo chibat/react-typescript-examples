@@ -1,8 +1,9 @@
+// Compiled using typings@0.6.6
+// Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/493d3b6882c79289cd9597a45c287250297d5b9d/marked/marked.d.ts
 // Type definitions for Marked
 // Project: https://github.com/chjj/marked
 // Definitions by: William Orr <https://github.com/worr>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
-
 
 interface MarkedStatic {
     /**
@@ -59,7 +60,44 @@ interface MarkedStatic {
      *
      * @param options Hash of options
      */
-    setOptions(options: MarkedOptions): void;
+    setOptions(options: MarkedOptions): MarkedStatic;
+    
+    Renderer: {
+        new(): MarkedRenderer;
+    }
+    
+    Parser: {
+        new(options: MarkedOptions): MarkedParser;
+    }
+}
+
+interface MarkedRenderer {
+    code(code: string, language: string): string;
+    blockquote(quote: string): string;
+    html(html: string): string;
+    heading(text: string, level: number): string;
+    hr(): string;
+    list(body: string, ordered: boolean): string;
+    listitem(text: string): string;
+    paragraph(text: string): string;
+    table(header: string, body: string): string;
+    tablerow(content: string): string;
+    tablecell(content: string, flags: {
+        header: boolean,
+        align: string
+    }): string;
+    strong(text: string): string;
+    em(text: string): string;
+    codespan(code: string): string;
+    br(): string;
+    del(text: string): string;
+    link(href: string, title: string, text: string): string;
+    image(href: string, title: string, text: string): string;
+    text(text: string): string;
+}
+
+interface MarkedParser {
+    parse(source: any[]): string
 }
 
 interface MarkedOptions {
@@ -68,7 +106,7 @@ interface MarkedOptions {
      *
      * An object containing functions to render tokens to HTML.
      */
-    renderer?: Object; 
+    renderer?: MarkedRenderer; 
 
     /**
      * Enable GitHub flavored markdown.

@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/browser.d.ts" />
 
 function value(e: React.FormEvent) {
     return (e.target as any).value;
@@ -29,7 +29,7 @@ class TodoApp extends React.Component<{}, {items?: string[], text: string}> {
             <h3>TODO</h3>
             <TodoList items={this.state.items} />
             <form onSubmit={this.handleSubmit}>
-              <input onChange={e=>this.setState({text: value(e)})} value={this.state.text} />
+              <input onChange={(e: React.FormEvent)=>this.setState({text: value(e)})} value={this.state.text} />
               <button>{'Add #' + (this.state.items.length + 1)}</button>
             </form>
           </div>

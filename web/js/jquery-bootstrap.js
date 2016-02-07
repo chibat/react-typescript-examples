@@ -1,4 +1,3 @@
-/// <reference path="typings/tsd.d.ts" />
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -10,10 +9,10 @@ var BootstrapButton = (function (_super) {
         _super.apply(this, arguments);
     }
     BootstrapButton.prototype.render = function () {
-        return (React.createElement("a", React.__spread({}, this.props, {"href": "javascript:;", "role": "button", "className": (this.props.className || '') + ' btn'})));
+        return (React.createElement("a", React.__spread({}, this.props, {href: "javascript:;", role: "button", className: (this.props.className || '') + ' btn'})));
     };
     return BootstrapButton;
-})(React.Component);
+}(React.Component));
 var BootstrapModal = (function (_super) {
     __extends(BootstrapModal, _super);
     function BootstrapModal() {
@@ -37,10 +36,10 @@ var BootstrapModal = (function (_super) {
     };
     ;
     BootstrapModal.prototype.render = function () {
-        return (React.createElement("div", {"className": "modal fade", "ref": "root"}, React.createElement("div", {"className": "modal-dialog"}, React.createElement("div", {"className": "modal-content"}, React.createElement("div", {"className": "modal-header"}, React.createElement("button", {"type": "button", "className": "close", "onClick": this.handleCancel}, "×"), React.createElement("h3", null, this.props.title)), React.createElement("div", {"className": "modal-body"}, this.props.children), React.createElement("div", {"className": "modal-footer"}, this.props.cancel ? (React.createElement(BootstrapButton, {"onClick": this.handleCancel, "className": "btn-default"}, this.props.cancel)) : null, this.props.confirm ? (React.createElement(BootstrapButton, {"onClick": this.handleConfirm, "className": "btn-primary"}, this.props.confirm)) : null)))));
+        return (React.createElement("div", {className: "modal fade", ref: "root"}, React.createElement("div", {className: "modal-dialog"}, React.createElement("div", {className: "modal-content"}, React.createElement("div", {className: "modal-header"}, React.createElement("button", {type: "button", className: "close", onClick: this.handleCancel}, "×"), React.createElement("h3", null, this.props.title)), React.createElement("div", {className: "modal-body"}, this.props.children), React.createElement("div", {className: "modal-footer"}, this.props.cancel ? (React.createElement(BootstrapButton, {onClick: this.handleCancel, className: "btn-default"}, this.props.cancel)) : null, this.props.confirm ? (React.createElement(BootstrapButton, {onClick: this.handleConfirm, className: "btn-primary"}, this.props.confirm)) : null)))));
     };
     return BootstrapModal;
-})(React.Component);
+}(React.Component));
 var Example = (function (_super) {
     __extends(Example, _super);
     function Example() {
@@ -59,9 +58,9 @@ var Example = (function (_super) {
         };
     }
     Example.prototype.render = function () {
-        return (React.createElement("div", {"className": "example"}, React.createElement(BootstrapModal, {"ref": "modal", "confirm": "OK", "cancel": "Cancel", "onCancel": this.handleCancel, "onConfirm": this.closeModal, "title": "Hello, Bootstrap!"}, "This is a React component powered by jQuery and Bootstrap!"), React.createElement(BootstrapButton, {"onClick": this.openModal, "className": "btn-default"}, "Open modal")));
+        return (React.createElement("div", {className: "example"}, React.createElement(BootstrapModal, {ref: "modal", confirm: "OK", cancel: "Cancel", onCancel: this.handleCancel, onConfirm: this.closeModal, title: "Hello, Bootstrap!"}, "This is a React component powered by jQuery and Bootstrap!"), React.createElement(BootstrapButton, {onClick: this.openModal, className: "btn-default"}, "Open modal")));
     };
     ;
     return Example;
-})(React.Component);
+}(React.Component));
 ReactDOM.render(React.createElement(Example, null), document.getElementById('jqueryexample'));

@@ -1,4 +1,3 @@
-/// <reference path="typings/tsd.d.ts" />
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -13,5 +12,5 @@ var HelloMessage = (function (_super) {
         return React.createElement("div", null, "Hello ", this.props.name);
     };
     return HelloMessage;
-})(React.Component);
-ReactDOM.render(React.createElement(HelloMessage, {"name": "John"}), document.getElementById('container'));
+}(React.Component));
+ReactDOM.render(React.createElement(HelloMessage, {name: "John"}), document.getElementById('container'));

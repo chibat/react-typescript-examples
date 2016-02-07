@@ -1,4 +1,4 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/browser.d.ts" />
 
 namespace quadratic {
 
@@ -28,15 +28,15 @@ class QuadraticCalculator extends React.Component<{}, {a?: number, b?: number, c
             <h4>Solve for <em>x</em>:</h4>
             <p>
               <label>
-                a: <input type="number" value={String(a)} onChange={e=>this.setState({a: value(e)})} />
+                a: <input type="number" value={String(a)} onChange={(e: React.FormEvent)=>this.setState({a: value(e)})} />
               </label>
               <br />
               <label>
-                b: <input type="number" value={String(b)} onChange={e=>this.setState({b: value(e)})} />
+                b: <input type="number" value={String(b)} onChange={(e: React.FormEvent)=>this.setState({b: value(e)})} />
               </label>
               <br />
               <label>
-                c: <input type="number" value={String(c)} onChange={e=>this.setState({c: value(e)})} />
+                c: <input type="number" value={String(c)} onChange={(e: React.FormEvent)=>this.setState({c: value(e)})} />
               </label>
               <br />
               x: <strong>{x1}, {x2}</strong>
